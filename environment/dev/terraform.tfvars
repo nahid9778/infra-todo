@@ -249,3 +249,14 @@ vms = {
     }]
   }
 }
+
+# azure_bastions = {
+#   bastion1 = {
+#     name                = ""
+#     location            = ""
+#     resource_group_name = ""
+#     ip_configuration = {
+#       name = ""
+#     }
+#   }
+# }

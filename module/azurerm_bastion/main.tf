@@ -1,11 +1,18 @@
-resource "azurerm_bastion_host" "example" {
-  name                = "examplebastion"
-  location            = azurerm_resource_group.example.location
-  resource_group_name = azurerm_resource_group.example.name
+# resource "azurerm_bastion_host" "azure_bastion" {
+#   for_each            = var.azure_bastions
+#   name                = each.value.name
+#   location            = each.value.location
+#   resource_group_name = each.value.resource_group_name
 
-  ip_configuration {
-    name                 = "configuration"
-    subnet_id            = azurerm_subnet.example.id
-    public_ip_address_id = azurerm_public_ip.example.id
-  }
-}
+#   dynamic "ip_configuration" {
+#     for_each = each.value.ip_configurations
+
+#     content {
+#       name                 = ip_configuration.value.name
+#       subnet_id            = data.azurerm_subnet.subnet_ids.id
+#       public_ip_address_id = data.azurerm_public_ip.pip_ids
+#     }
+#   }
+# }
+
+
