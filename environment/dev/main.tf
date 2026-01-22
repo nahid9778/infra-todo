@@ -56,3 +56,9 @@ module "vm" {
   source     = "../../module/azurerm_virtual_machine"
   vms        = var.vms
 }
+
+# module "azure_bastion" {
+#   depends_on     = [module.resource_group, module.public_ip]
+#   source         = "../../module/azurerm_bastion"
+#   azure_bastions = var.azure_bastions
+# }

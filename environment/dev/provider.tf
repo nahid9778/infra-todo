@@ -6,10 +6,10 @@ terraform {
     }
   }
   backend "azurerm" {
-    resource_group_name  = "backendrgali"
-    storage_account_name = "backendstorageali"
+    resource_group_name  = "backendrg001"
+    storage_account_name = "backendstorage001"
     container_name       = "tfstate"
-    key                  = "terraform.tfstate"
+    key                  = "todo.terraform.tfstate"
   }
 }
 
